@@ -14,6 +14,10 @@ target/
 *.iml
 .idea/
 
+# Secrets
+src/main/resources/application-local.properties
+bin/main/resources/application.properties
+
 # Logs
 *.log
 logs/
