@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-dark-900 text-white font-sans;
+    background-image:
+      radial-gradient(ellipse at 20% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+    min-height: 100vh;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-dark-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-neon-purple;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .glass-hover {
+    @apply hover:bg-white/10 hover:border-white/20 transition-all duration-300;
+  }
+
+  .neon-border {
+    @apply border border-neon-purple/30;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.1), inset 0 0 15px rgba(168, 85, 247, 0.05);
+  }
+
+  .neon-border-blue {
+    @apply border border-neon-blue/30;
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
+  }
+
+  .neon-glow {
+    text-shadow: 0 0 20px rgba(168, 85, 247, 0.8), 0 0 40px rgba(168, 85, 247, 0.4);
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 rounded-xl font-medium transition-all duration-200
+           bg-gradient-to-r from-neon-purple to-neon-pink text-white
+           hover:opacity-90 hover:scale-[1.02] active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 rounded-xl font-medium transition-all duration-200
+           text-gray-400 hover:text-white hover:bg-white/10;
+  }
+
+  .card {
+    @apply glass rounded-2xl p-5 glass-hover;
+  }
+
+  .input-dark {
+    @apply w-full px-4 py-2.5 rounded-xl
+           bg-dark-700 border border-white/10 text-white
+           placeholder-gray-500 outline-none
+           focus:border-neon-purple/50 focus:ring-1 focus:ring-neon-purple/30
+           transition-all duration-200;
+  }
+
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+  }
+
+  .modal-content {
+    @apply glass neon-border rounded-2xl p-6 w-full max-w-md;
+  }
+}
+
+.time-block-enter {
+  animation: blockAppear 0.3s ease-out forwards;
+}
+
+@keyframes blockAppear {
+  from {
+    opacity: 0;
+    transform: scaleY(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}

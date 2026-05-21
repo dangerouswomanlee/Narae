@@ -1,0 +1,28 @@
+# Maven / Spring Boot
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/
+
+# IDE
+.eclipse/
+.settings/
+.classpath
+.project
+*.iml
+.idea/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
