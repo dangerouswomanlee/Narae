@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import { motion } from 'framer-motion'
 
-const HOURS = Array.from({ length: 13 }, (_, i) => i + 9) // 9 ~ 21
+const HOURS = Array.from({ length: 15 }, (_, i) => i + 9) // 9 ~ 23
 const SLOT_HEIGHT = 56 // px per hour
 
 const COLOR_CLASSES = [
@@ -62,7 +62,7 @@ export default function TimeTable({ reservations, onSlotClick, onReservationClic
           <span className="text-xs text-gray-500">※ 클릭하여 예약</span>
         </div>
 
-        <div className="relative flex" style={{ minHeight: SLOT_HEIGHT * 13 }}>
+        <div className="relative flex" style={{ minHeight: SLOT_HEIGHT * 15 }}>
           {/* Time labels */}
           <div className="w-14 flex-shrink-0 relative">
             {HOURS.map(hour => (
@@ -97,11 +97,11 @@ export default function TimeTable({ reservations, onSlotClick, onReservationClic
             {/* Bottom border */}
             <div
               className="absolute left-0 right-0 border-t border-dashed border-white/5"
-              style={{ top: 13 * SLOT_HEIGHT }}
+              style={{ top: 15 * SLOT_HEIGHT }}
             />
 
             {/* Current time indicator */}
-            {currentTimeTop > 0 && currentTimeTop < 13 * SLOT_HEIGHT && (
+            {currentTimeTop > 0 && currentTimeTop < 15 * SLOT_HEIGHT && (
               <div
                 className="absolute left-0 right-0 z-20 pointer-events-none flex items-center"
                 style={{ top: currentTimeTop }}

@@ -23,7 +23,7 @@ public class ReservationService {
     private final BCryptPasswordEncoder passwordEncoder;
 
     private static final LocalTime OPEN_TIME = LocalTime.of(9, 0);
-    private static final LocalTime CLOSE_TIME = LocalTime.of(22, 0);
+    private static final LocalTime CLOSE_TIME = LocalTime.of(23, 59);
     private static final int MAX_COLOR_INDEX = 8;
 
     public List<ReservationResponseDto> getReservationsByDate(LocalDate date) {
@@ -112,7 +112,7 @@ public class ReservationService {
             throw new IllegalArgumentException("시작 시간은 종료 시간보다 이전이어야 합니다");
         }
         if (start.isBefore(OPEN_TIME) || end.isAfter(CLOSE_TIME)) {
-            throw new IllegalArgumentException("운영 시간은 09:00 ~ 22:00 입니다");
+            throw new IllegalArgumentException("운영 시간은 09:00 ~ 24:00 입니다");
         }
     }
 }

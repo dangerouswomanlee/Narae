@@ -5,7 +5,7 @@ import { format } from 'date-fns'
 import { ko } from 'date-fns/locale'
 
 const MIN_MINUTES = 9 * 60   // 09:00
-const MAX_MINUTES = 22 * 60  // 22:00
+const MAX_MINUTES = 24 * 60  // 24:00 (자정)
 
 
 function minutesToDisplay(minutes) {
@@ -15,6 +15,8 @@ function minutesToDisplay(minutes) {
 }
 
 function minutesToApiTime(minutes) {
+  // 자정(24:00)은 DB에 23:59:00으로 저장
+  if (minutes >= 24 * 60) return '23:59:00'
   return minutesToDisplay(minutes) + ':00'
 }
 
@@ -241,7 +243,7 @@ export default function ReservationModal({ isOpen, onClose, selectedDate, defaul
                     value={startMinutes}
                     onChange={setStartMinutes}
                     minVal={MIN_MINUTES}
-                    maxVal={21 * 60 + 50}
+                    maxVal={23 * 60 + 50}
                   />
                   <TimeSelect
                     label="종료 시간"
