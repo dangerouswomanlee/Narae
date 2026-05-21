@@ -37,11 +37,12 @@ const navItems = [
   },
 ]
 
-function NavItem({ item, collapsed }) {
+function NavItem({ item, collapsed, onClick }) {
   return (
     <NavLink
       to={item.path}
       end={item.path === '/'}
+      onClick={onClick}
       className={({ isActive }) =>
         `flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 group relative
         ${isActive
@@ -87,15 +88,17 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Mobile hamburger */}
-      <button
-        onClick={() => setMobileOpen(true)}
-        className="md:hidden fixed top-4 left-4 z-50 p-2 glass rounded-xl"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+      {/* Mobile hamburger - 사이드바 닫혔을 때만 표시 */}
+      {!mobileOpen && (
+        <button
+          onClick={() => setMobileOpen(true)}
+          className="md:hidden fixed top-4 left-4 z-50 p-2 glass rounded-xl"
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      )}
 
       {/* Mobile overlay */}
       <AnimatePresence>
@@ -110,32 +113,34 @@ export default function Sidebar() {
         )}
       </AnimatePresence>
 
-      {/* Sidebar */}
+      {/* Desktop sidebar */}
       <motion.aside
         animate={{ width: collapsed ? 72 : 240 }}
         transition={{ duration: 0.25, ease: 'easeInOut' }}
-        className={`
-          hidden md:flex flex-col fixed top-0 left-0 h-full z-30
-          glass border-r border-white/5
-        `}
+        className="hidden md:flex flex-col fixed top-0 left-0 h-full z-30 glass border-r border-white/5"
       >
         <SidebarContent collapsed={collapsed} onToggle={() => setCollapsed(!collapsed)} />
       </motion.aside>
 
       {/* Mobile sidebar */}
-      <motion.aside
-        initial={{ x: -280 }}
-        animate={{ x: mobileOpen ? 0 : -280 }}
-        transition={{ duration: 0.25, ease: 'easeInOut' }}
-        className="md:hidden fixed top-0 left-0 h-full w-64 z-50 glass border-r border-white/5"
-      >
-        <SidebarContent collapsed={false} onToggle={() => setMobileOpen(false)} mobileClose />
-      </motion.aside>
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.aside
+            initial={{ x: -280 }}
+            animate={{ x: 0 }}
+            exit={{ x: -280 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="md:hidden fixed top-0 left-0 h-full w-64 z-50 glass border-r border-white/5"
+          >
+            <SidebarContent collapsed={false} onToggle={() => setMobileOpen(false)} mobileClose onNavClick={() => setMobileOpen(false)} />
+          </motion.aside>
+        )}
+      </AnimatePresence>
     </>
   )
 }
 
-function SidebarContent({ collapsed, onToggle, mobileClose }) {
+function SidebarContent({ collapsed, onToggle, mobileClose, onNavClick }) {
   return (
     <div className="flex flex-col h-full p-3">
       {/* Logo */}
@@ -162,24 +167,30 @@ function SidebarContent({ collapsed, onToggle, mobileClose }) {
       {/* Nav */}
       <nav className="flex flex-col gap-1 flex-1">
         {navItems.map(item => (
-          <NavItem key={item.path} item={item} collapsed={collapsed} />
+          <NavItem key={item.path} item={item} collapsed={collapsed} onClick={onNavClick} />
         ))}
       </nav>
 
-      {/* Collapse toggle */}
+      {/* 하단 버튼: 모바일은 X(닫기), 데스크탑은 접기 화살표 */}
       <button
         onClick={onToggle}
         className="flex items-center justify-center w-8 h-8 rounded-xl glass-hover mx-auto mb-2 text-gray-500 hover:text-white transition-colors"
       >
-        <motion.svg
-          animate={{ rotate: collapsed ? 180 : 0 }}
-          className="w-4 h-4"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
-        </motion.svg>
+        {mobileClose ? (
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        ) : (
+          <motion.svg
+            animate={{ rotate: collapsed ? 180 : 0 }}
+            className="w-4 h-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+          </motion.svg>
+        )}
       </button>
     </div>
   )
