@@ -7,11 +7,6 @@ import { ko } from 'date-fns/locale'
 const MIN_MINUTES = 9 * 60   // 09:00
 const MAX_MINUTES = 22 * 60  // 22:00
 
-function generateSlots(minVal, maxVal) {
-  const slots = []
-  for (let m = minVal; m <= maxVal; m += 10) slots.push(m)
-  return slots
-}
 
 function minutesToDisplay(minutes) {
   const h = Math.floor(minutes / 60)
@@ -29,27 +24,75 @@ function formatDuration(minutes) {
   return `${Math.floor(minutes / 60)}시간 ${minutes % 60}분`
 }
 
+function ArrowButton({ onClick, disabled, children }) {
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={`w-8 h-7 flex items-center justify-center rounded-lg transition-all duration-150
+        ${disabled
+          ? 'text-gray-700 cursor-not-allowed'
+          : 'text-gray-400 hover:text-white hover:bg-white/10 active:scale-95'
+        }`}
+    >
+      {children}
+    </button>
+  )
+}
+
 function TimeSelect({ label, value, onChange, minVal, maxVal }) {
-  const slots = generateSlots(minVal, maxVal)
+  const hours = Math.floor(value / 60)
+  const minutes = value % 60
+
+  const changeHour = (delta) => {
+    const newVal = value + delta * 60
+    if (newVal >= minVal && newVal <= maxVal) onChange(newVal)
+  }
+
+  const changeMinute = (delta) => {
+    const newVal = value + delta * 10
+    if (newVal >= minVal && newVal <= maxVal) onChange(newVal)
+  }
+
   return (
     <div className="flex flex-col gap-1.5">
       <label className="text-xs text-gray-400 font-medium">{label}</label>
-      <div className="relative">
-        <select
-          value={value}
-          onChange={e => onChange(parseInt(e.target.value))}
-          className="input-dark pr-8 appearance-none cursor-pointer"
-        >
-          {slots.map(m => (
-            <option key={m} value={m}>
-              {minutesToDisplay(m)}
-            </option>
-          ))}
-        </select>
-        <svg className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"
-          fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-        </svg>
+      <div className="glass rounded-xl px-3 py-2 flex items-center justify-center gap-1">
+        {/* Hour */}
+        <div className="flex flex-col items-center">
+          <ArrowButton onClick={() => changeHour(1)} disabled={value + 60 > maxVal}>
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 15l7-7 7 7" />
+            </svg>
+          </ArrowButton>
+          <span className="text-xl font-bold text-white w-9 text-center tabular-nums">
+            {String(hours).padStart(2, '0')}
+          </span>
+          <ArrowButton onClick={() => changeHour(-1)} disabled={value - 60 < minVal}>
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+            </svg>
+          </ArrowButton>
+        </div>
+
+        <span className="text-xl font-bold text-gray-500 mb-0.5">:</span>
+
+        {/* Minute */}
+        <div className="flex flex-col items-center">
+          <ArrowButton onClick={() => changeMinute(1)} disabled={value + 10 > maxVal}>
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 15l7-7 7 7" />
+            </svg>
+          </ArrowButton>
+          <span className="text-xl font-bold text-white w-9 text-center tabular-nums">
+            {String(minutes).padStart(2, '0')}
+          </span>
+          <ArrowButton onClick={() => changeMinute(-1)} disabled={value - 10 < minVal}>
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+            </svg>
+          </ArrowButton>
+        </div>
       </div>
     </div>
   )
