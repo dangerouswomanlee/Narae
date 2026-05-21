@@ -96,8 +96,8 @@ function JoinModal({ part, postId, onClose, onSuccess }) {
           <button
             onClick={handleSubmit}
             disabled={loading}
-            className="flex-1 py-2.5 rounded-xl text-sm font-semibold text-white
-              bg-white text-dark-900 font-semibold
+            className="flex-1 py-2.5 rounded-xl text-sm font-semibold
+              bg-white text-gray-900
               hover:bg-gray-100 transition-opacity disabled:opacity-50"
           >
             {loading ? '신청 중...' : '참가하기'}
@@ -181,8 +181,8 @@ function PartCard({ part, postId, postClosed, onUpdate, onToast }) {
               <button
                 onClick={(e) => handleLeave(e, p.id)}
                 disabled={leavingId === p.id}
-                className="opacity-0 group-hover:opacity-100 w-3.5 h-3.5 flex items-center justify-center
-                  rounded-full text-blue-400 hover:text-white hover:bg-red-500/60
+                className="w-3.5 h-3.5 flex items-center justify-center
+                  rounded-full text-blue-300 hover:text-white hover:bg-red-500/60
                   transition-all text-[10px] leading-none ml-0.5"
                 title="참여 취소"
               >
