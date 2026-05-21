@@ -54,7 +54,7 @@ export default function ReservationPage() {
         className="mb-6"
       >
         <h1 className="text-2xl font-bold text-white mb-1">합주 예약</h1>
-        <p className="text-gray-400 text-sm">날짜를 선택하고 원하는 시간을 예약하세요 · 운영시간 09:00 ~ 22:00</p>
+        <p className="text-gray-400 text-sm">날짜를 선택하고 원하는 시간을 예약하세요 · 운영시간 09:00 ~ 24:00</p>
       </motion.div>
 
       <div className="flex flex-col lg:flex-row gap-6">
