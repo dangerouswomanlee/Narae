@@ -114,13 +114,15 @@ export default function Sidebar() {
       </AnimatePresence>
 
       {/* Desktop sidebar */}
-      <motion.aside
-        animate={{ width: collapsed ? 72 : 240 }}
-        transition={{ duration: 0.25, ease: 'easeInOut' }}
-        className="hidden md:flex flex-col fixed top-0 left-0 h-full z-30 glass border-r border-white/5"
-      >
-        <SidebarContent collapsed={collapsed} onToggle={() => setCollapsed(!collapsed)} />
-      </motion.aside>
+      <div className="hidden md:block">
+        <motion.aside
+          animate={{ width: collapsed ? 72 : 240 }}
+          transition={{ duration: 0.25, ease: 'easeInOut' }}
+          className="flex flex-col fixed top-0 left-0 h-full z-30 glass border-r border-white/5"
+        >
+          <SidebarContent collapsed={collapsed} onToggle={() => setCollapsed(!collapsed)} />
+        </motion.aside>
+      </div>
 
       {/* Mobile sidebar */}
       <AnimatePresence>
