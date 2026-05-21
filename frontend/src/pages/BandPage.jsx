@@ -124,7 +124,7 @@ export default function BandPage() {
             onClick={() => setFilter(tab.key)}
             className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200
               ${filter === tab.key
-                ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg'
+                ? 'bg-white text-dark-900 shadow-lg font-semibold'
                 : 'text-gray-400 hover:text-white'
               }`}
           >

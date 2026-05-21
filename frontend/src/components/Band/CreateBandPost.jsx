@@ -109,7 +109,7 @@ export default function CreateBandPost({ isOpen, onClose, onSuccess }) {
                     <button key={preset} onClick={() => addPart(preset)}
                       disabled={parts.some(p => p.partName === preset)}
                       className="text-xs px-2.5 py-1 rounded-lg border transition-all duration-150
-                        border-white/10 text-gray-400 hover:border-purple-500/50 hover:text-purple-300
+                        border-white/10 text-gray-400 hover:border-blue-500/50 hover:text-blue-300
                         disabled:opacity-30 disabled:cursor-not-allowed">
                       + {preset}
                     </button>
@@ -119,10 +119,10 @@ export default function CreateBandPost({ isOpen, onClose, onSuccess }) {
                       onKeyDown={e => e.key === 'Enter' && addPart(customPart)}
                       placeholder="직접 입력"
                       className="text-xs px-2.5 py-1 rounded-lg border border-white/10 bg-dark-700 text-gray-300
-                        focus:border-purple-500/50 outline-none w-24" />
+                        focus:border-blue-500/50 outline-none w-24" />
                     <button onClick={() => addPart(customPart)}
-                      className="text-xs px-2 py-1 rounded-lg border border-purple-500/30
-                        text-purple-400 hover:bg-purple-500/10 transition-colors">
+                      className="text-xs px-2 py-1 rounded-lg border border-blue-500/30
+                        text-blue-400 hover:bg-blue-500/10 transition-colors">
                       추가
                     </button>
                   </div>

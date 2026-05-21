@@ -70,15 +70,15 @@ export default function ReservationPage() {
           {/* Selected date info */}
           <div className="card neon-border">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500/30 to-pink-500/30 flex items-center justify-center">
-                <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/30 to-blue-600/30 flex items-center justify-center">
+                <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
               <div>
                 <div className="text-sm font-semibold text-white">
                   {format(selectedDate, 'yyyy년 M월 d일', { locale: ko })}
-                  {isToday && <span className="ml-2 text-xs bg-purple-500/30 text-purple-300 px-1.5 py-0.5 rounded-md">오늘</span>}
+                  {isToday && <span className="ml-2 text-xs bg-blue-500/30 text-blue-300 px-1.5 py-0.5 rounded-md">오늘</span>}
                   {isTomorrow && <span className="ml-2 text-xs bg-blue-500/30 text-blue-300 px-1.5 py-0.5 rounded-md">내일</span>}
                 </div>
                 <div className="text-xs text-gray-400">
@@ -138,7 +138,7 @@ export default function ReservationPage() {
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-semibold text-white">타임테이블</h2>
             {loading && (
-              <svg className="animate-spin w-4 h-4 text-purple-400" fill="none" viewBox="0 0 24 24">
+              <svg className="animate-spin w-4 h-4 text-blue-400" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
@@ -152,7 +152,7 @@ export default function ReservationPage() {
               <span>빈 시간 (클릭하여 예약)</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <div className="w-3 h-3 rounded bg-purple-600/60" />
+              <div className="w-3 h-3 rounded bg-blue-600/60" />
               <span>예약됨</span>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import naraeLogo from '../../../naraelogo.jpg'
 
 const navItems = [
   {
@@ -44,7 +45,7 @@ function NavItem({ item, collapsed }) {
       className={({ isActive }) =>
         `flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 group relative
         ${isActive
-          ? 'bg-gradient-to-r from-purple-900/50 to-pink-900/30 border border-white/10 text-white'
+          ? 'bg-white/10 border border-white/20 text-white'
           : 'text-gray-500 hover:text-gray-200 hover:bg-white/5'
         }`
       }
@@ -52,7 +53,7 @@ function NavItem({ item, collapsed }) {
       {({ isActive }) => (
         <>
           <span className={`flex-shrink-0 transition-colors duration-200
-            ${isActive ? 'text-purple-400' : 'text-gray-500 group-hover:text-gray-300'}`}>
+            ${isActive ? 'text-white' : 'text-gray-500 group-hover:text-gray-300'}`}>
             {item.icon}
           </span>
           <AnimatePresence>
@@ -71,7 +72,7 @@ function NavItem({ item, collapsed }) {
           {isActive && (
             <motion.div
               layoutId="sidebar-indicator"
-              className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full"
+              className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-white rounded-full"
             />
           )}
         </>
@@ -139,10 +140,8 @@ function SidebarContent({ collapsed, onToggle, mobileClose }) {
     <div className="flex flex-col h-full p-3">
       {/* Logo */}
       <div className="flex items-center gap-3 px-2 py-4 mb-4">
-        <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
-          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+        <div className="w-8 h-8 rounded-xl overflow-hidden flex-shrink-0">
+          <img src={naraeLogo} alt="나래 로고" className="w-full h-full object-cover" />
         </div>
         <AnimatePresence>
           {!collapsed && (
@@ -151,7 +150,7 @@ function SidebarContent({ collapsed, onToggle, mobileClose }) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <div className="text-base font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <div className="text-base font-bold bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
                 나래
               </div>
               <div className="text-xs text-gray-500">합주 예약</div>

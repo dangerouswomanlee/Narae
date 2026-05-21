@@ -9,7 +9,7 @@ export default function Toast({ message, type = 'success', onClose }) {
   }, [message, onClose])
 
   const styles = {
-    success: 'bg-gradient-to-r from-purple-600 to-pink-600 border-purple-400/30',
+    success: 'bg-white text-dark-900 border-white/30',
     error: 'bg-red-600/90 border-red-400/30',
     info: 'bg-gray-700 border-gray-600/30',
   }

@@ -29,7 +29,7 @@ function PinInput({ value, onChange }) {
           id={`detail-pin-${i}`}
           className="w-12 h-12 text-center text-xl font-bold
             bg-dark-700 border border-white/10 rounded-xl text-white
-            focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/30
+            focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/30
             outline-none transition-all duration-200"
         />
       ))}
@@ -104,8 +104,8 @@ export default function ReservationDetailModal({ reservation, isOpen, onClose, o
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 {/* Time info */}
                 <div className="glass rounded-xl p-4 mb-4 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                    <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>

@@ -57,7 +57,7 @@ function JoinModal({ part, postId, onClose, onSuccess }) {
         onClick={e => e.stopPropagation()}
       >
         <div className="flex items-center gap-3 mb-5">
-          <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center text-xl">
+          <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center text-xl">
             {getPartIcon(part.partName)}
           </div>
           <div>
@@ -97,8 +97,8 @@ function JoinModal({ part, postId, onClose, onSuccess }) {
             onClick={handleSubmit}
             disabled={loading}
             className="flex-1 py-2.5 rounded-xl text-sm font-semibold text-white
-              bg-gradient-to-r from-purple-500 to-pink-500
-              hover:opacity-90 transition-opacity disabled:opacity-50"
+              bg-white text-dark-900 font-semibold
+              hover:bg-gray-100 transition-opacity disabled:opacity-50"
           >
             {loading ? '신청 중...' : '참가하기'}
           </button>
@@ -161,7 +161,7 @@ function PartCard({ part, postId, postClosed, onUpdate, onToast }) {
               className={`h-full rounded-full ${
                 isFull
                   ? 'bg-gradient-to-r from-green-500 to-emerald-400'
-                  : 'bg-gradient-to-r from-purple-500 to-pink-500'
+                  : 'bg-gradient-to-r from-blue-500 to-blue-400'
               }`}
             />
           </div>
@@ -173,16 +173,16 @@ function PartCard({ part, postId, postClosed, onUpdate, onToast }) {
             <span
               key={p.id}
               className="text-xs px-2.5 py-1 rounded-lg
-                bg-purple-500/20 text-purple-200 border border-purple-500/30
+                bg-blue-500/20 text-blue-200 border border-blue-500/30
                 flex items-center gap-1.5 group"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-400 flex-shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
               {p.participantName}
               <button
                 onClick={(e) => handleLeave(e, p.id)}
                 disabled={leavingId === p.id}
                 className="opacity-0 group-hover:opacity-100 w-3.5 h-3.5 flex items-center justify-center
-                  rounded-full text-purple-400 hover:text-white hover:bg-red-500/60
+                  rounded-full text-blue-400 hover:text-white hover:bg-red-500/60
                   transition-all text-[10px] leading-none ml-0.5"
                 title="참여 취소"
               >
@@ -209,9 +209,8 @@ function PartCard({ part, postId, postClosed, onUpdate, onToast }) {
             <button
               onClick={() => setShowJoin(true)}
               className="w-full py-2 rounded-xl text-xs font-semibold text-white
-                bg-gradient-to-r from-purple-500/80 to-pink-500/80
-                hover:from-purple-500 hover:to-pink-500
-                border border-purple-500/30 hover:border-purple-400/50
+                bg-white/10 hover:bg-white/20
+                border border-white/20 hover:border-white/40
                 transition-all duration-200 flex items-center justify-center gap-1.5"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-white/70" />
@@ -459,7 +458,7 @@ export default function BandPostDetail({ post, onClose, onUpdate, onDelete }) {
                     className={`h-full rounded-full ${
                       allFull
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-400'
-                        : 'bg-gradient-to-r from-purple-500 to-pink-500'
+                        : 'bg-gradient-to-r from-white/70 to-white/50'
                     }`}
                   />
                 </div>

@@ -125,7 +125,7 @@ function PinInput({ value, onChange }) {
           id={`pin-${i}`}
           className="w-12 h-12 text-center text-xl font-bold
             bg-dark-700 border border-white/10 rounded-xl text-white
-            focus:border-purple-500/50 focus:ring-1 focus:ring-purple-500/30
+            focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/30
             outline-none transition-all duration-200"
         />
       ))}
@@ -216,14 +216,14 @@ export default function ReservationModal({ isOpen, onClose, selectedDate, defaul
               {[1, 2].map(s => (
                 <React.Fragment key={s}>
                   <div className={`flex items-center gap-1.5 text-xs font-medium transition-colors
-                    ${step >= s ? 'text-purple-400' : 'text-gray-600'}`}>
+                    ${step >= s ? 'text-white' : 'text-gray-600'}`}>
                     <div className={`w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold
-                      ${step >= s ? 'bg-purple-500 text-white' : 'bg-dark-600 text-gray-500'}`}>
+                      ${step >= s ? 'bg-white text-dark-900' : 'bg-dark-600 text-gray-500'}`}>
                       {s}
                     </div>
                     {s === 1 ? '시간 선택' : '정보 입력'}
                   </div>
-                  {s < 2 && <div className={`flex-1 h-px ${step > s ? 'bg-purple-500' : 'bg-dark-600'}`} />}
+                  {s < 2 && <div className={`flex-1 h-px ${step > s ? 'bg-white/40' : 'bg-dark-600'}`} />}
                 </React.Fragment>
               ))}
             </div>
@@ -254,8 +254,8 @@ export default function ReservationModal({ isOpen, onClose, selectedDate, defaul
 
                 {/* Duration summary */}
                 <div className="glass rounded-xl p-3 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                    <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>

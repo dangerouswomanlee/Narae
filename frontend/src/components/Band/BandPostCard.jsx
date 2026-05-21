@@ -6,7 +6,7 @@ import { ko } from 'date-fns/locale'
 const PART_COLORS = {
   '보컬': { bg: 'bg-pink-500/20', text: 'text-pink-300', border: 'border-pink-500/30' },
   '기타': { bg: 'bg-blue-500/20', text: 'text-blue-300', border: 'border-blue-500/30' },
-  '베이스': { bg: 'bg-purple-500/20', text: 'text-purple-300', border: 'border-purple-500/30' },
+  '베이스': { bg: 'bg-indigo-500/20', text: 'text-indigo-300', border: 'border-indigo-500/30' },
   '드럼': { bg: 'bg-orange-500/20', text: 'text-orange-300', border: 'border-orange-500/30' },
   '키보드': { bg: 'bg-cyan-500/20', text: 'text-cyan-300', border: 'border-cyan-500/30' },
   '신디': { bg: 'bg-cyan-500/20', text: 'text-cyan-300', border: 'border-cyan-500/30' },
@@ -56,7 +56,7 @@ export default function BandPostCard({ post, onClick }) {
       </div>
 
       {/* Title */}
-      <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors mb-1.5 line-clamp-1">
+      <h3 className="font-semibold text-white group-hover:text-gray-300 transition-colors mb-1.5 line-clamp-1">
         {post.title}
       </h3>
 
@@ -101,7 +101,7 @@ export default function BandPostCard({ post, onClick }) {
             className={`h-full rounded-full ${post.isClosed
               ? 'bg-gray-500'
               : ratio >= 1 ? 'bg-gradient-to-r from-green-500 to-emerald-400'
-              : 'bg-gradient-to-r from-purple-500 to-pink-500'}`}
+              : 'bg-gradient-to-r from-white/80 to-white/60'}`}
           />
         </div>
       </div>

@@ -88,7 +88,7 @@ function NoticeFormModal({ isOpen, onClose, onSuccess, editTarget }) {
                 <div
                   onClick={() => setIsPinned(!isPinned)}
                   className={`w-10 h-5 rounded-full transition-colors duration-200 relative
-                    ${isPinned ? 'bg-purple-500' : 'bg-dark-500'}`}
+                    ${isPinned ? 'bg-blue-500' : 'bg-dark-500'}`}
                 >
                   <span className={`absolute top-0.5 w-4 h-4 rounded-full bg-white transition-all duration-200
                     ${isPinned ? 'left-5' : 'left-0.5'}`} />

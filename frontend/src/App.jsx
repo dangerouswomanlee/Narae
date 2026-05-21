@@ -8,7 +8,7 @@ import NoticePage from './pages/NoticePage'
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="flex min-h-screen">
+      <div className="flex min-h-screen overflow-x-hidden">
         <Sidebar />
         <main className="flex-1 md:ml-60 transition-all duration-300 min-h-screen">
           <Routes>

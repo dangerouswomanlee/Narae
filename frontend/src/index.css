@@ -10,9 +10,10 @@
   body {
     @apply bg-dark-900 text-white font-sans;
     background-image:
-      radial-gradient(ellipse at 20% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+      radial-gradient(ellipse at 30% 40%, rgba(59, 130, 246, 0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 75% 60%, rgba(99, 102, 241, 0.14) 0%, transparent 50%);
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   ::-webkit-scrollbar {
@@ -43,23 +44,23 @@
   }
 
   .neon-border {
-    @apply border border-neon-purple/30;
-    box-shadow: 0 0 15px rgba(168, 85, 247, 0.1), inset 0 0 15px rgba(168, 85, 247, 0.05);
+    @apply border border-white/10;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.1), inset 0 0 10px rgba(59, 130, 246, 0.03);
   }
 
   .neon-border-blue {
-    @apply border border-neon-blue/30;
+    @apply border border-blue-500/30;
     box-shadow: 0 0 15px rgba(59, 130, 246, 0.1);
   }
 
   .neon-glow {
-    text-shadow: 0 0 20px rgba(168, 85, 247, 0.8), 0 0 40px rgba(168, 85, 247, 0.4);
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4);
   }
 
   .btn-primary {
-    @apply px-4 py-2 rounded-xl font-medium transition-all duration-200
-           bg-gradient-to-r from-neon-purple to-neon-pink text-white
-           hover:opacity-90 hover:scale-[1.02] active:scale-95;
+    @apply px-4 py-2 rounded-xl font-semibold transition-all duration-200
+           bg-white text-dark-900
+           hover:bg-gray-100 hover:scale-[1.02] active:scale-95;
   }
 
   .btn-ghost {
@@ -75,7 +76,7 @@
     @apply w-full px-4 py-2.5 rounded-xl
            bg-dark-700 border border-white/10 text-white
            placeholder-gray-500 outline-none
-           focus:border-neon-purple/50 focus:ring-1 focus:ring-neon-purple/30
+           focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/30
            transition-all duration-200;
   }
 

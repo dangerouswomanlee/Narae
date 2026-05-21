@@ -72,9 +72,9 @@ export default function MiniCalendar({ selectedDate, onSelect }) {
                 transition-all duration-150
                 ${isPast ? 'text-gray-700 cursor-not-allowed' :
                   isSelected
-                    ? 'bg-gradient-to-br from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/30'
+                    ? 'bg-white text-dark-900 shadow-lg shadow-white/20 font-bold'
                     : isTodayDay
-                      ? 'text-purple-300 border border-purple-500/40'
+                      ? 'text-white border border-white/40'
                       : dayNum === 0 ? 'text-red-400 hover:bg-red-500/10'
                       : dayNum === 6 ? 'text-blue-400 hover:bg-blue-500/10'
                       : 'text-gray-300 hover:bg-white/10'
@@ -83,7 +83,7 @@ export default function MiniCalendar({ selectedDate, onSelect }) {
             >
               {format(day, 'd')}
               {isTodayDay && !isSelected && (
-                <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-purple-400" />
+                <span className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-white/60" />
               )}
             </motion.button>
           )
