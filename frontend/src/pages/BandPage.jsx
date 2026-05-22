@@ -38,7 +38,12 @@ export default function BandPage() {
     }
   }
 
-  const handleUpdate = async () => {
+  const handleUpdate = useCallback(async (updatedPost) => {
+    if (updatedPost) {
+      setSelectedPost(updatedPost)
+      fetchPosts()
+      return
+    }
     if (selectedPost) {
       try {
         const detail = await bandApi.getOne(selectedPost.id)
@@ -48,7 +53,7 @@ export default function BandPage() {
         console.error(e)
       }
     }
-  }
+  }, [selectedPost, fetchPosts])
 
   const handleDelete = (message) => {
     setSelectedPost(null)

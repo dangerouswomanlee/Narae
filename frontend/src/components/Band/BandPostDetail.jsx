@@ -121,8 +121,8 @@ function PartCard({ part, postId, postClosed, onUpdate, onToast }) {
     e.stopPropagation()
     setLeavingId(participantId)
     try {
-      await bandApi.leave(postId, participantId)
-      onUpdate()
+      const updatedPost = await bandApi.leave(postId, participantId)
+      onUpdate(updatedPost)
     } catch (err) {
       onToast(err.message || '취소에 실패했습니다', 'error')
     } finally {
