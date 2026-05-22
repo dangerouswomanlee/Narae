@@ -124,7 +124,7 @@ function PartCard({ part, postId, postClosed, onUpdate, onToast }) {
       await bandApi.leave(postId, participantId)
       onUpdate()
     } catch (err) {
-      console.error(err)
+      onToast(err.message || '취소에 실패했습니다', 'error')
     } finally {
       setLeavingId(null)
     }
@@ -181,9 +181,10 @@ function PartCard({ part, postId, postClosed, onUpdate, onToast }) {
               <button
                 onClick={(e) => handleLeave(e, p.id)}
                 disabled={leavingId === p.id}
-                className="w-3.5 h-3.5 flex items-center justify-center
+                className="w-5 h-5 flex items-center justify-center
                   rounded-full text-blue-300 hover:text-white hover:bg-red-500/60
-                  transition-all text-[10px] leading-none ml-0.5"
+                  transition-all text-xs leading-none ml-0.5 flex-shrink-0
+                  disabled:opacity-50"
                 title="참여 취소"
               >
                 {leavingId === p.id ? '·' : '×'}
