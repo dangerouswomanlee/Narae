@@ -17,8 +17,7 @@
     </td>
   </tr>
   <tr>
-    <th align="center">예약 생성 모달</th>
-    <th align="center">색상 선택</th>
+    <th colspan="2" align="left">예약 생성 모달</th>
   </tr>
   <tr>
     <td align="center" width="50%">
