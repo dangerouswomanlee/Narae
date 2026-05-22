@@ -7,28 +7,81 @@
 
 ---
 
-📸 스크린샷
-<br>
-🥁 합주 예약
-<br>
-예약 페이지 전체 화면
-<img src="https://github.com/user-attachments/assets/a0d11d79-0bb1-4ae9-bef9-e19e921a98ce" width="100%" />
-<br>
-예약 생성 모달  |  색상 선택
-<img src="https://github.com/user-attachments/assets/8ba2772d-0d21-4604-9361-8ca8b5f608bf" width="49%" />
-<img src="https://github.com/user-attachments/assets/9195691d-30d2-46d6-b357-f1da0f93d9ef" width="49%" />
-<br>
-예약 상세 · 수정 · 삭제 모달
-<img src="https://github.com/user-attachments/assets/8662f74a-1b03-4398-ad43-2b1abf67a38e" width="50%" />
+<table>
+  <tr>
+    <th colspan="2" align="left">🥁 합주 예약 — 전체 화면</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="https://github.com/user-attachments/assets/a0d11d79-0bb1-4ae9-bef9-e19e921a98ce" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <th align="center">예약 생성 모달</th>
+    <th align="center">색상 선택</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/8ba2772d-0d21-4604-9361-8ca8b5f608bf" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/9195691d-30d2-46d6-b357-f1da0f93d9ef" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <th align="left">예약 상세 · 수정 · 삭제 모달</th>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/8662f74a-1b03-4398-ad43-2b1abf67a38e" width="100%" />
+    </td>
+    <td></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th colspan="2" align="left">🎸 팀 모집 — 전체 화면</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="https://github.com/user-attachments/assets/737c5a1e-fecc-44c5-85d9-8f63eaf5e7b2" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <th align="center">모집 글 작성 모달</th>
+    <th align="center">모집 상세 모달</th>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/71ce1e94-9ab3-457d-a7ba-686916de7fa8" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/3566398a-be64-4a74-a42e-92cf2f9a8e56" width="100%" />
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th colspan="2" align="left">📢 공지사항 &amp; 레이아웃 — 전체 화면</th>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="https://github.com/user-attachments/assets/1d5d9098-4be1-4634-b532-75a406640d62" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <th align="left">사이드바 / 모바일 레이아웃</th>
+    <td></td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/user-attachments/assets/df6178a5-2249-470f-bdb1-3df092e888b5" width="30%" />
+    </td>
+    <td></td>
+  </tr>
+</table>
 
-🎸 팀 모집
-<br>
-팀 모집 목록 전체 화면
-<img src="https://github.com/user-attachments/assets/737c5a1e-fecc-44c5-85d9-8f63eaf5e7b2" width="100%" />
-<br>
-모집 글 작성 모달  |  모집 상세 모달
-<img src="https://github.com/user-attachments/assets/71ce1e94-9ab3-457d-a7ba-686916de7fa8" width="49%" />
-<img src="https://github.com/user-attachments/assets/3566398a-be64-4a74-a42e-92cf2f9a8e56" width="49%" />
 ---
 
 ## ✨ 주요 기능
