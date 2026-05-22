@@ -9,26 +9,18 @@
 
 ## 📸 스크린샷
 
-> 아래 각 항목에 해당 화면 캡처 이미지를 삽입하세요.
+합주 예약
+<img width="1874" alt="합주 예약 페이지" src="https://github.com/user-attachments/assets/a0d11d79-0bb1-4ae9-bef9-e19e921a98ce" />
+예약 생성 모달예약 생성 모달 (색상 선택)<img width="476" alt="예약 생성 모달" src="https://github.com/user-attachments/assets/8ba2772d-0d21-4604-9361-8ca8b5f608bf" /><img width="478" alt="예약 생성 모달 색상" src="https://github.com/user-attachments/assets/9195691d-30d2-46d6-b357-f1da0f93d9ef" />
+<img width="497" alt="예약 상세 모달" src="https://github.com/user-attachments/assets/8662f74a-1b03-4398-ad43-2b1abf67a38e" />
 
-| 위치 | 삽입할 사진 내용 |
-|------|----------------|
-| **<img width="1874" height="891" alt="image" src="https://github.com/user-attachments/assets/a0d11d79-0bb1-4ae9-bef9-e19e921a98ce" />
-[사진 1] 합주 예약 페이지** | 캘린더 + 타임테이블이 함께 보이는 전체 화면 |
-| **<img width="476" height="451" alt="image" src="https://github.com/user-attachments/assets/8ba2772d-0d21-4604-9361-8ca8b5f608bf" /><img width="478" height="405" alt="image" src="https://github.com/user-attachments/assets/9195691d-30d2-46d6-b357-f1da0f93d9ef" />
-[사진 2] 예약 생성 모달** | "예약하기" 버튼 클릭 후 팝업 — 팀명·시간·색상 선택 화면 |
-| **<img width="497" height="274" alt="image" src="https://github.com/user-attachments/assets/8662f74a-1b03-4398-ad43-2b1abf67a38e" />
-[사진 3] 예약 상세 모달** | 예약된 블록 클릭 시 상세 정보 + 수정/삭제 화면 |
-| **<img width="1901" height="832" alt="image" src="https://github.com/user-attachments/assets/737c5a1e-fecc-44c5-85d9-8f63eaf5e7b2" />
-[사진 4] 팀 모집 목록** | 카드 그리드 + 전체/모집중/마감 필터 탭이 보이는 화면 |
-| **<img width="546" height="768" alt="image" src="https://github.com/user-attachments/assets/71ce1e94-9ab3-457d-a7ba-686916de7fa8" />
-[사진 5] 팀 모집 글 작성 모달** | 제목·곡명·파트 구성 입력 화면 |
-| **<img width="547" height="775" alt="image" src="https://github.com/user-attachments/assets/3566398a-be64-4a74-a42e-92cf2f9a8e56" />
-[사진 6] 팀 모집 상세 모달** | 파트별 신청 현황 + 신청/취소 버튼이 있는 화면 |
-| **<img width="1914" height="863" alt="image" src="https://github.com/user-attachments/assets/1d5d9098-4be1-4634-b532-75a406640d62" />
-[사진 7] 공지사항 목록** | 상단 고정(⭐) 공지와 일반 공지가 구분되는 리스트 화면 |
-| **<img width="267" height="891" alt="image" src="https://github.com/user-attachments/assets/df6178a5-2249-470f-bdb1-3df092e888b5" />
-[사진 8] 사이드바 / 모바일 레이아웃** | 사이드 네비게이션 또는 모바일 화면 |
+팀 모집
+<img width="1901" alt="팀 모집 목록" src="https://github.com/user-attachments/assets/737c5a1e-fecc-44c5-85d9-8f63eaf5e7b2" />
+팀 모집 글 작성 모달팀 모집 상세 모달<img width="546" alt="팀 모집 글 작성" src="https://github.com/user-attachments/assets/71ce1e94-9ab3-457d-a7ba-686916de7fa8" /><img width="547" alt="팀 모집 상세" src="https://github.com/user-attachments/assets/3566398a-be64-4a74-a42e-92cf2f9a8e56" />
+
+공지사항 & 레이아웃
+<img width="1914" alt="공지사항 목록" src="https://github.com/user-attachments/assets/1d5d9098-4be1-4634-b532-75a406640d62" />
+<img width="267" alt="사이드바 모바일 레이아웃" src="https://github.com/user-attachments/assets/df6178a5-2249-470f-bdb1-3df092e888b5" />
 
 ---
 
