@@ -123,6 +123,7 @@ public class BandPostService {
         }
 
         bandParticipantRepository.delete(participant);
+        bandParticipantRepository.flush();
 
         if (Boolean.TRUE.equals(post.getIsClosed())) {
             post.setIsClosed(false);
