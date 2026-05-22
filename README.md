@@ -27,15 +27,16 @@
       <img src="https://github.com/user-attachments/assets/9195691d-30d2-46d6-b357-f1da0f93d9ef" width="100%" />
     </td>
   </tr>
-  <tr>
-    <th align="left">예약 상세 · 수정 · 삭제 모달</th>
-    <td></td>
+ <tr>
+    <th colspan="2" align="left">예약 상세 · 수정 · 삭제 모달</th>
   </tr>
   <tr>
-    <td>
+    <td align="center" width="50%">
       <img src="https://github.com/user-attachments/assets/8662f74a-1b03-4398-ad43-2b1abf67a38e" width="100%" />
     </td>
-    <td></td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/b56a08d6-e639-433b-9e3f-1c987192adfd" width="100%" />
+    </td>
   </tr>
 </table>
 <table>
