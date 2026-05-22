@@ -7,21 +7,28 @@
 
 ---
 
-## 📸 스크린샷
+📸 스크린샷
+<br>
+🥁 합주 예약
+<br>
+예약 페이지 전체 화면
+<img src="https://github.com/user-attachments/assets/a0d11d79-0bb1-4ae9-bef9-e19e921a98ce" width="100%" />
+<br>
+예약 생성 모달  |  색상 선택
+<img src="https://github.com/user-attachments/assets/8ba2772d-0d21-4604-9361-8ca8b5f608bf" width="49%" />
+<img src="https://github.com/user-attachments/assets/9195691d-30d2-46d6-b357-f1da0f93d9ef" width="49%" />
+<br>
+예약 상세 · 수정 · 삭제 모달
+<img src="https://github.com/user-attachments/assets/8662f74a-1b03-4398-ad43-2b1abf67a38e" width="50%" />
 
-합주 예약
-<img width="1874" alt="합주 예약 페이지" src="https://github.com/user-attachments/assets/a0d11d79-0bb1-4ae9-bef9-e19e921a98ce" />
-예약 생성 모달예약 생성 모달 (색상 선택)<img width="476" alt="예약 생성 모달" src="https://github.com/user-attachments/assets/8ba2772d-0d21-4604-9361-8ca8b5f608bf" /><img width="478" alt="예약 생성 모달 색상" src="https://github.com/user-attachments/assets/9195691d-30d2-46d6-b357-f1da0f93d9ef" />
-<img width="497" alt="예약 상세 모달" src="https://github.com/user-attachments/assets/8662f74a-1b03-4398-ad43-2b1abf67a38e" />
-
-팀 모집
-<img width="1901" alt="팀 모집 목록" src="https://github.com/user-attachments/assets/737c5a1e-fecc-44c5-85d9-8f63eaf5e7b2" />
-팀 모집 글 작성 모달팀 모집 상세 모달<img width="546" alt="팀 모집 글 작성" src="https://github.com/user-attachments/assets/71ce1e94-9ab3-457d-a7ba-686916de7fa8" /><img width="547" alt="팀 모집 상세" src="https://github.com/user-attachments/assets/3566398a-be64-4a74-a42e-92cf2f9a8e56" />
-
-공지사항 & 레이아웃
-<img width="1914" alt="공지사항 목록" src="https://github.com/user-attachments/assets/1d5d9098-4be1-4634-b532-75a406640d62" />
-<img width="267" alt="사이드바 모바일 레이아웃" src="https://github.com/user-attachments/assets/df6178a5-2249-470f-bdb1-3df092e888b5" />
-
+🎸 팀 모집
+<br>
+팀 모집 목록 전체 화면
+<img src="https://github.com/user-attachments/assets/737c5a1e-fecc-44c5-85d9-8f63eaf5e7b2" width="100%" />
+<br>
+모집 글 작성 모달  |  모집 상세 모달
+<img src="https://github.com/user-attachments/assets/71ce1e94-9ab3-457d-a7ba-686916de7fa8" width="49%" />
+<img src="https://github.com/user-attachments/assets/3566398a-be64-4a74-a42e-92cf2f9a8e56" width="49%" />
 ---
 
 ## ✨ 주요 기능
