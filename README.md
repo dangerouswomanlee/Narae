@@ -1,16 +1,12 @@
-# 🎸 나래 (Narae)
+# 나래 (Narae)
 
-**밴드 동아리를 위한 합주실 예약 및 팀 모집 웹 서비스**
+밴드 동아리를 위한 합주실 예약 및 팀 모집 웹 서비스입니다. 비회원제 경량 구조로, 별도 로그인 없이 팀명과 비밀번호만으로 예약을 만들고 수정·삭제할 수 있습니다. 합주 예약, 팀원 모집, 공지사항 세 가지 기능을 하나의 플랫폼에서 제공합니다.
 
-비회원제 경량 구조로, 별도 로그인 없이 팀명 + 비밀번호만으로 예약·수정·삭제가 가능합니다.
-합주 예약, 팀원 모집, 공지사항 세 가지 핵심 기능을 하나의 플랫폼에서 제공합니다.
-
-🔗 **배포 URL:** https://narae-ruddy.vercel.app
----
+배포 URL: https://narae-ruddy.vercel.app
 
 <table>
   <tr>
-    <th colspan="2" align="left">🥁 합주 예약 — 전체 화면</th>
+    <th colspan="2" align="left">합주 예약 — 전체 화면</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -42,7 +38,7 @@
 </table>
 <table>
   <tr>
-    <th colspan="2" align="left">🎸 팀 모집 — 전체 화면</th>
+    <th colspan="2" align="left">팀 모집 — 전체 화면</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -64,7 +60,7 @@
 </table>
 <table>
   <tr>
-    <th colspan="2" align="left">📢 공지사항 &amp; 레이아웃 — 전체 화면</th>
+    <th colspan="2" align="left">공지사항 &amp; 레이아웃 — 전체 화면</th>
   </tr>
   <tr>
     <td colspan="2">
@@ -83,57 +79,40 @@
   </tr>
 </table>
 
----
-
-## ✨ 주요 기능
+## 주요 기능
 
 ### 1. 합주 예약
-- **날짜별 타임테이블** — 미니 캘린더에서 날짜를 선택하면 해당 날의 09:00 ~ 24:00 타임슬롯을 시각적으로 확인
-- **빠른 예약** — 빈 타임슬롯 클릭 시 해당 시간으로 자동 세팅된 모달 팝업
-- **예약 시 입력 항목** — 팀명, 시작 시간, 종료 시간, 비밀번호 (4자리), 색상 선택
-- **예약 수정 / 삭제** — 예약 블록 클릭 → 비밀번호 인증 후 수정 또는 취소 가능
-- **실시간 통계** — 선택된 날짜의 예약 건수, 예약된 총 시간, 남은 가용 시간을 카드로 표시
-- **오늘/내일 뱃지** — 선택 날짜가 오늘 또는 내일인 경우 자동 강조 표시
+
+미니 캘린더에서 날짜를 선택하면 09:00~24:00 타임슬롯이 표로 보이고, 빈 슬롯을 클릭하면 해당 시간으로 자동 세팅된 모달이 뜹니다. 예약 시 팀명, 시작·종료 시간, 4자리 비밀번호, 색상을 입력하며, 예약 블록을 클릭한 뒤 비밀번호를 확인하면 수정하거나 취소할 수 있습니다. 선택한 날짜의 예약 건수, 예약된 총 시간, 남은 가용 시간은 카드로 보여주고, 오늘/내일 날짜에는 뱃지가 자동으로 붙습니다.
 
 ### 2. 팀 모집
-- **모집 글 작성** — 제목, 합주 곡명, 상세 내용, 작성자명, 파트 구성 입력
-- **파트 구성** — 보컬·기타·베이스·드럼·키보드 프리셋 + 커스텀 파트 추가, 파트별 모집 인원 수 조절
-- **신청 / 취소** — 파트별로 이름을 입력하여 신청, 비밀번호 없이 신청자 이름으로 취소
-- **모집 마감 토글** — 작성자(비밀번호 인증)가 모집 상태를 수동으로 열기/닫기
-- **필터 탭** — 전체 / 모집중 / 마감 세 가지로 게시글 분류
-- **통계 카드** — 전체·모집중·마감 게시글 수 요약 표시
-- **게시글 삭제** — 비밀번호 인증 후 삭제
+
+제목, 합주 곡명, 상세 내용, 작성자명, 파트 구성을 입력해 모집 글을 작성합니다. 보컬·기타·베이스·드럼·키보드는 프리셋으로 제공하고 커스텀 파트도 추가할 수 있으며, 파트별 모집 인원도 조절 가능합니다. 신청은 파트에 이름만 입력하면 되고, 취소는 비밀번호 없이 신청자 이름으로 처리됩니다. 작성자는 비밀번호 인증 후 모집 상태를 열고 닫을 수 있고, 전체/모집중/마감 탭으로 게시글을 필터링할 수 있습니다. 삭제는 비밀번호 인증이 필요합니다.
 
 ### 3. 공지사항
-- **공지 작성 / 수정 / 삭제** — 제목, 내용, 상단 고정 여부(토글) 설정
-- **상단 고정** — 아이콘과 함께 일반 공지 위에 우선 표시
-- **작성일 / 수정일 표시** — 수정된 공지에는 "(수정됨)" 표시
-- **클릭하여 상세 보기** — 공지 카드 클릭 시 본문 전체를 모달로 확인
 
----
+제목, 내용, 상단 고정 여부를 설정해 작성·수정·삭제할 수 있습니다. 상단 고정된 공지는 일반 공지보다 위에 표시되고, 수정된 공지에는 "(수정됨)" 표시가 붙습니다. 공지 카드를 클릭하면 본문 전체를 모달로 볼 수 있습니다.
 
-## 🛠 기술 스택
+## 기술 스택
 
 | 구분 | 기술 | 버전 |
 |------|------|------|
-| **Frontend** | React | 18 |
+| Frontend | React | 18 |
 | | Vite | - |
 | | Tailwind CSS | - |
 | | Framer Motion | - |
 | | Axios | - |
 | | date-fns | - |
-| **Backend** | Spring Boot | 3.2.0 |
+| Backend | Spring Boot | 3.2.0 |
 | | Spring Security | - |
 | | Spring Data JPA | - |
 | | Spring Validation | - |
 | | Lombok | - |
-| **Database** | PostgreSQL (운영) / MySQL (로컬 SQL 스크립트) | - |
-| **빌드** | Maven | - |
-| **배포** | Docker | - |
+| Database | PostgreSQL (운영) / MySQL (로컬 SQL 스크립트) | - |
+| 빌드 | Maven | - |
+| 배포 | Docker | - |
 
----
-
-## 🗂 프로젝트 구조
+## 프로젝트 구조
 
 ```
 Narae/
@@ -193,41 +172,27 @@ Narae/
 └── pom.xml
 ```
 
----
+## 실행 방법
 
-## 🚀 실행 방법
-
-### 사전 준비
-
-- Java 17+
-- Node.js 18+
-- PostgreSQL 또는 MySQL
-
----
+Java 17+, Node.js 18+, PostgreSQL 또는 MySQL이 필요합니다.
 
 ### 1. 데이터베이스 설정
 
-#### MySQL 사용 시 (로컬 개발)
+로컬에서 MySQL을 쓴다면 `narae_db.sql`을 실행합니다. 테이블 생성과 함께 샘플 공지·밴드 게시글도 들어 있습니다.
 
 ```sql
--- narae_db.sql 파일을 실행하거나 아래 명령어 사용
 mysql -u root -p < narae_db.sql
 ```
 
-제공된 `narae_db.sql`에는 테이블 생성 + 샘플 공지·밴드 게시글이 포함되어 있습니다.
-
-#### PostgreSQL 사용 시 (운영/배포 기본값)
+운영/배포 기본값인 PostgreSQL을 쓴다면 데이터베이스만 미리 만들어두면 됩니다.
 
 ```sql
 CREATE DATABASE narae_db;
 ```
 
----
-
 ### 2. 백엔드 환경변수 설정
 
-`src/main/resources/application.properties`에서 아래 항목을 수정하거나,  
-실행 시 환경변수로 주입합니다.
+`src/main/resources/application.properties`에서 아래 항목을 수정하거나 실행 시 환경변수로 주입합니다.
 
 ```properties
 # DB 연결 (기본값: PostgreSQL localhost)
@@ -242,23 +207,17 @@ server.port=${PORT:8080}
 app.cors.allowed-origins=${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
 ```
 
-MySQL로 변경할 경우 `pom.xml`의 PostgreSQL 드라이버를 MySQL 드라이버로 교체하고  
-`driver-class-name`, `jpa.database-platform`도 함께 수정해야 합니다.
-
----
+MySQL로 바꾸려면 `pom.xml`의 PostgreSQL 드라이버를 MySQL 드라이버로 교체하고, `driver-class-name`과 `jpa.database-platform`도 함께 수정해야 합니다.
 
 ### 3. 백엔드 실행
 
-Eclipse에서 `NaraeApplication.java`를 Run As > Spring Boot App으로 실행하거나,  
-터미널에서 아래 명령어를 사용합니다.
+Eclipse에서 `NaraeApplication.java`를 Run As > Spring Boot App으로 실행하거나, 터미널에서 아래 명령어를 사용합니다.
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-백엔드는 `http://localhost:8080` 에서 실행됩니다.
-
----
+백엔드는 `http://localhost:8080`에서 실행됩니다.
 
 ### 4. 프론트엔드 실행
 
@@ -268,9 +227,7 @@ npm install
 npm run dev
 ```
 
-브라우저에서 `http://localhost:5173` 접속
-
----
+브라우저에서 `http://localhost:5173`으로 접속합니다.
 
 ### 5. Docker로 백엔드 실행 (선택)
 
@@ -287,9 +244,7 @@ docker run -p 8080:8080 \
   narae-backend
 ```
 
----
-
-## 📡 API 엔드포인트
+## API 엔드포인트
 
 ### 합주 예약 `/api/reservations`
 
@@ -325,9 +280,7 @@ docker run -p 8080:8080 \
 | `PUT` | `/api/notices/{id}` | 공지 수정 |
 | `DELETE` | `/api/notices/{id}` | 공지 삭제 |
 
----
-
-## 🗄 데이터베이스 스키마
+## 데이터베이스 스키마
 
 ```
 reservation          band_post
@@ -358,21 +311,10 @@ created_at
 updated_at
 ```
 
----
+## 보안 구조
 
-## 🔒 보안 구조
+로그인 없는 비회원 구조라, 예약이나 게시글을 만들 때 설정한 비밀번호로 본인 인증을 합니다. 비밀번호는 Spring Security의 `PasswordEncoder`로 BCrypt 해시 처리해 저장하고, Spring Security는 정적 리소스와 `/api/**` 전체를 permit하도록 설정하고 CSRF는 비활성화했습니다. CORS는 `application.properties`의 `app.cors.allowed-origins` 환경변수로 제어합니다.
 
-- 로그인 없는 **비회원 구조** — 예약·게시글 생성 시 설정한 비밀번호로 본인 인증
-- 비밀번호는 **BCrypt 해시**로 저장 (Spring Security `PasswordEncoder`)
-- Spring Security는 정적 리소스 및 `/api/**` 전체를 permit하도록 설정 (CSRF 비활성화)
-- CORS는 `application.properties`의 `app.cors.allowed-origins` 환경변수로 제어
+## 개발 참고사항
 
----
-
-## 📝 개발 참고사항
-
-- 프론트엔드 API 기본 URL은 `VITE_API_BASE_URL` 환경변수로 변경 가능  
-  (미설정 시 `/api` 상대 경로 사용 — Vite 프록시 또는 Nginx reverse proxy 필요)
-- `vite.config.js`에서 개발 시 `/api` → `http://localhost:8080` 프록시 설정 확인
-- 운영 배포 시 프론트엔드를 빌드(`npm run build`)하여 백엔드 static resource 경로에 배치하거나,  
-  별도 서버(Nginx 등)에서 서빙하고 CORS 오리진을 환경변수로 설정
+프론트엔드 API 기본 URL은 `VITE_API_BASE_URL` 환경변수로 바꿀 수 있습니다. 설정하지 않으면 `/api` 상대 경로를 쓰는데, 이 경우 Vite 프록시나 Nginx reverse proxy가 필요합니다. 개발 중에는 `vite.config.js`에서 `/api` → `http://localhost:8080` 프록시 설정을 확인하면 됩니다. 운영 배포 시에는 프론트엔드를 빌드(`npm run build`)해서 백엔드 static resource 경로에 두거나, 별도 서버(Nginx 등)에서 서빙하고 CORS 오리진을 환경변수로 설정합니다.
