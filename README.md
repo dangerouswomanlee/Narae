@@ -12,54 +12,69 @@
 
 <table>
   <tr>
-    <th colspan="2" align="left">합주 예약</th>
+    <th colspan="2" align="left">합주 예약 — 전체 화면</th>
   </tr>
   <tr>
-    <td align="center" width="50%">
+    <td colspan="2">
       <img src="https://github.com/user-attachments/assets/a0d11d79-0bb1-4ae9-bef9-e19e921a98ce" width="100%" />
     </td>
+  </tr>
+  <tr>
+    <th colspan="2" align="left">예약 생성 모달</th>
+  </tr>
+  <tr>
     <td align="center" width="50%">
       <img src="https://github.com/user-attachments/assets/8ba2772d-0d21-4604-9361-8ca8b5f608bf" width="100%" />
     </td>
-  </tr>
-  <tr>
     <td align="center" width="50%">
       <img src="https://github.com/user-attachments/assets/9195691d-30d2-46d6-b357-f1da0f93d9ef" width="100%" />
     </td>
+  </tr>
+  <tr>
+    <th colspan="2" align="left">예약 상세 · 수정 · 삭제 모달</th>
+  </tr>
+  <tr>
     <td align="center" width="50%">
       <img src="https://github.com/user-attachments/assets/8662f74a-1b03-4398-ad43-2b1abf67a38e" width="100%" />
     </td>
-  </tr>
-  <tr>
-    <th colspan="2" align="left">팀 모집</th>
-  </tr>
-  <tr>
     <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/b56a08d6-e639-433b-9e3f-1c987192adfd" width="100%" />
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th colspan="2" align="left">팀 모집 — 전체 화면</th>
+  </tr>
+  <tr>
+    <td colspan="2">
       <img src="https://github.com/user-attachments/assets/737c5a1e-fecc-44c5-85d9-8f63eaf5e7b2" width="100%" />
     </td>
+  </tr>
+  <tr>
+    <th align="center">모집 글 작성 모달</th>
+    <th align="center">모집 상세 모달</th>
+  </tr>
+  <tr>
     <td align="center" width="50%">
       <img src="https://github.com/user-attachments/assets/71ce1e94-9ab3-457d-a7ba-686916de7fa8" width="100%" />
     </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="https://github.com/user-attachments/assets/3566398a-be64-4a74-a42e-92cf2f9a8e56" width="60%" />
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/3566398a-be64-4a74-a42e-92cf2f9a8e56" width="100%" />
     </td>
   </tr>
+</table>
+<table>
   <tr>
-    <th colspan="2" align="left">공지사항 & 레이아웃</th>
+    <th colspan="2" align="left">공지사항 &amp; 레이아웃 — 전체 화면</th>
   </tr>
   <tr>
-    <td align="center" width="50%">
+    <td colspan="2">
       <img src="https://github.com/user-attachments/assets/1d5d9098-4be1-4634-b532-75a406640d62" width="100%" />
-    </td>
-    <td align="center" width="50%">
-      <img src="https://github.com/user-attachments/assets/df6178a5-2249-470f-bdb1-3df092e888b5" width="100%" />
     </td>
   </tr>
 </table>
 
----
 
 ## 주요 기능
 
@@ -176,7 +191,7 @@ npm run dev
 ### 1. 배포 후 서버가 잠들어 첫 접속이 느린 문제
 
 - 문제: 배포한 사이트에 오랜만에 들어가면 이전 데이터가 바로 뜨지 않는 문제가 있었습니다.
-- 해결: Render 무료 플랜은 일정 시간 요청이 없으면 서버가 잠들었다가 다시 요청이 와야 깨어나는 구조였습니다. UptimeRobot으로 주기적으로 서버에 요청을 보내 잠들지 않도록 설정해 해결했습니다. 모니터링 툴을 직접 써본 것도 이번이 처음이었습니다.
+- 해결: Render 무료 플랜은 일정 시간 요청이 없으면 서버가 잠들었다가 다시 요청이 와야 깨어나는 구조였습니다. 그래서 UptimeRobot으로 주기적으로 서버에 요청을 보내 잠들지 않도록 설정하여 해결했습니다. 모니터링 툴을 직접 써본 것은 이번이 처음이었습니다.
 
 ### 2. 모바일에서 가독성이 떨어지는 문제
 
@@ -186,7 +201,7 @@ npm run dev
 ### 3. 파트 신청 취소가 화면에 반영되지 않는 문제
 
 - 문제: 팀 모집 게시글에서 파트 신청을 취소해도 목록에서 바로 사라지지 않는 오류가 있었습니다.
-- 해결: 게시글 상세를 조회하는 JPQL 쿼리가 `parts`만 조인하고 `participants`는 조인하지 않아서, 취소 요청이 성공해도 다음 조회에서 예전 참여자 목록이 그대로 남아있는 것이 원인이었습니다. 쿼리를 `participants`까지 함께 조인하도록 수정하고, 프론트엔드도 취소 후 다시 목록을 통째로 재조회하는 대신 API가 반환하는 최신 데이터를 바로 화면에 반영하도록 바꿔서 해결했습니다.
+- 해결: 게시글 상세를 조회하는 JPQL 쿼리가 `parts`만 조인하고 `participants`는 조인하지 않아서, 취소 요청이 성공해도 다음 조회에서 예전 참여자 목록이 그대로 남아있는 것이 원인이었습니다. 쿼리를 `participants`까지 함께 조인하도록 수정하고, 프론트엔드도 취소 후 다시 목록을 통째로 재조회하는 대신 API가 반환하는 최신 데이터를 바로 화면에 반영하도록 바꿔서 해결하였습니다.
 
 ---
 
@@ -195,3 +210,8 @@ npm run dev
 - 로그인 없이 비밀번호로 본인을 인증하는 비회원 구조입니다.
 - 비밀번호는 BCrypt로 해시해서 저장합니다.
 - CORS 허용 오리진은 환경변수로 제어합니다.
+
+---
+
+## 느낀 점
+두번째로 배포까지 해본 프로젝트라 그런지 큰 어려움 없이 지나갔지만, 무료 서버가 잠들었다가 깨어나는 걸 보고 UptimeRobot 같은 모니터링 툴을 처음 써봤고, 프론트엔드와 백엔드 사이에서 데이터가 어떻게 흘러야 화면에 제대로 반영되는지도 파트 취소 버그를 고치면서 다시 한번 배울수있었습니다. 무엇보다 실제 밴드 동아리 활동을 하면서 겪었던 불편함을 직접 해결했다는 점에서 좋은 경험이 되었습니다. 합주실 예약이 겹치거나 팀원을 구하기 어려웠던 문제를 겪어봤기 때문에 어떤 기능이 필요한지 더 정확하게 알 수 있었고, 완성된 서비스를 실제로 동아리에서 써볼 수 있다는 점도 좋았습니다. 
